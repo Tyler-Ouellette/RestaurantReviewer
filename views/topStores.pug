@@ -4,18 +4,18 @@ block content
   .inner
     h2 Top #{stores.length} Stores
     table.table
-      thead
-        td photo
-        td ranking
-        td name
-        td reviews
+      thead(style="font-size: 20px;")
+        td Photo
+        td Ranking
+        td Name
+        td Reviews
         td Average Rating
       each store, i in stores
         tr
-          td
+          td(style="font-size: 18px;")
             a(href=`/store/${store.slug}`)
-              img(width=200 src=`/uploads/${store.photo || 'store.png'}` alt=store.name)
-          td #{i + 1}
-          td: a(href=`/store/${store.slug}`)= store.name
-          td= store.reviews.length
-          td #{Math.round(store.averageRating * 10) / 10} / 5
+              img(width=180 src=`/uploads/${store.photo || 'store.png'}` alt=store.name)
+          td(style="font-size: 18px;") #{i + 1}
+          td(style="font-size: 18px;"): a(href=`/store/${store.slug}`)= store.name
+          td(style="font-size: 18px;")= store.reviews.length
+          td(style="font-size: 18px;") #{Math.round(store.averageRating * 10) / 10} / 5
