@@ -1,0 +1,17 @@
+mixin pagination(page, pages, count)
+
+  .pagination
+    .pagination__prev
+      if page > 1
+        a(href=`/stores/page/${page - 1}`) Prev
+    .pagination__text
+      p Page #{page} of #{pages} — #{count} Total Results
+    form(id="pageSelect" onSubmit="javascript:event.preventDefault(); window.location.href=`/stores/page/${pagenum.value}`;")
+      button.pagination__text(type="submit" style="border: none;") Go To    ➡️
+    select(name="pagenum" form="pageSelect" style="margin-right: 20px;")
+      - var i=0
+      while i++ < pages
+        option(value=i) #{i}
+    .pagination__next
+      if page < pages
+        a(href=`/stores/page/${parseFloat(page) + 1}`) Next

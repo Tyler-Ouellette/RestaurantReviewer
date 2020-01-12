@@ -1,0 +1,18 @@
+extends layout
+
+include mixins/_storeCard
+include mixins/_pagination
+
+block content
+  .inner
+    if user && owned
+      h2 Owned Stores
+      .stores
+        each store in owned
+          +storeCard(store)
+    h2= title
+    .stores
+      each store in stores
+        +storeCard(store)
+    if page && pages
+      +pagination(page, pages, count)
