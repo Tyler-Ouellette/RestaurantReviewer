@@ -21,7 +21,7 @@ const generateHTML = (filename, options = {}) => {
 
 exports.send = async options => {
     const mailOptions = {
-        from: 'Dev Connector <noreply@devconnector.dev>',
+        from: 'Restaurant Review <ouell117@uwindsor.ca>',
         to: options.user.email,
         subject: options.subject,
         html,
