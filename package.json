@@ -6,7 +6,7 @@
         "node": ">= 7.6.0"
     },
     "scripts": {
-        "start": "node start",
+        "start": "node start.js",
         "build": "node start",
         "watch": "nodemon start --ignore public/",
         "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
