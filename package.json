@@ -7,6 +7,7 @@
     },
     "scripts": {
         "start": "node start",
+        "build": "node start",
         "watch": "nodemon start --ignore public/",
         "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
         "assets": "webpack -w --display-max-modules 0",
