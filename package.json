@@ -1,14 +1,14 @@
 {
-    "name": "dang-thats-delicious",
-    "version": "0.0.0",
+    "name": "restaurant-reviewer",
+    "version": "0.0.1",
     "private": true,
     "engines": {
         "node": ">= 7.6.0"
     },
     "scripts": {
-        "prod": "node start",
+        "start": "node start",
         "watch": "nodemon start --ignore public/",
-        "start": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
+        "dev": "concurrently \"npm run watch\" \"npm run assets\" --names \"💻,📦\" --prefix name",
         "assets": "webpack -w --display-max-modules 0",
         "sample": "node ./data/load-sample-data.js",
         "blowitallaway": "node ./data/load-sample-data.js --delete",
@@ -45,6 +45,7 @@
         "passport": "0.3.2",
         "passport-local": "1.0.0",
         "passport-local-mongoose": "4.0.0",
+        "postmark": "^2.3.4",
         "pug": "2.0.0-beta6",
         "slugs": "0.1.3",
         "uuid": "3.0.1",
